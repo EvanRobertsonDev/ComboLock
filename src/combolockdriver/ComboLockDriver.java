@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Evan Robertson
+ * March 10 2020
+ * ComboLockDriver.java
+ * Generates a combo lock to unlock
  */
 
 package combolockdriver;
@@ -21,6 +22,8 @@ public class ComboLockDriver {
         System.out.println("Type '1' to randomly generate a lock");
         System.out.println("Type '2' to create a lock with a custom code");
         int choice = Integer.parseInt(input.nextLine());
+        
+        //Gen random lock
         if (choice == 1) {
             ComboLock lock = new ComboLock();
             System.out.println("The code for the lock is: " + lock.getCombo1() + " " + lock.getCombo2() + " " + lock.getCombo3());
@@ -37,6 +40,7 @@ public class ComboLockDriver {
                 System.out.println("Wrong");
             }
         }
+        //Custom
         else if (choice == 2) {
             System.out.println("Enter the first number");
             int codeA = Integer.parseInt(input.nextLine());
@@ -58,6 +62,7 @@ public class ComboLockDriver {
                 System.out.println("Wrong");
             }
         }
+        //vibe check
         else {
             System.out.println("Fake number you boomer");
         }
